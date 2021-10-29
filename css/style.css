@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: skyblue;
+    font-family: 'Poppins', sans-serif;
+
+}
+section{
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.section-title{
+    color: purple;
+}
+main{
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.top-player, .blogs , .courses{
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 30px;
+    place-items: center;
+ 
+}
+
+.top-player , .courses{
+    grid-template-columns: repeat(3, 1fr);
+}
+.player, .blog{
+    display: flex;
+    align-items: center;
+}
+.player img{
+    width: 70px;
+    margin-right: 20px;
+}
+
+.thumble img{
+    width: 200px;
+    margin-right: 20px;
+}
+
+
+
+
+.blogs{
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.filled{
+    color: goldenrod;
+}
+.unfilled{
+    color: lightgray;
+}
+.course img{
+    width: 200px;
+}
+.course-info, .duration{
+    display: flex;
+}
+
+@media (max-width : 992px) {
+    .top-player , .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+@media (max-width : 668px) {
+    .top-player , .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog{
+        display: block;
+    }
+    
+}
